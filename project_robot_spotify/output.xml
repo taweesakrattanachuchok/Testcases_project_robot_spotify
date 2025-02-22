@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.9.6 on darwin)" generated="2025-02-22T20:11:10.662567" rpa="false" schemaversion="5">
+<suite id="s1" name="LoginTestcases" source="/Users/taweessak/Documents/FutureSkill/project_robot_spotify/testcases/LoginTestcases.robot">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-02-22T20:11:10.734996" level="INFO">Opening browser 'chrome' to base url 'https://open.spotify.com/'.</msg>
+<arg>${baseUrl}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-02-22T20:11:10.734857" elapsed="9.680946"/>
+</kw>
+<test id="s1-t1" name="As a open web url spotify to loging success" line="12">
+<kw name="Where user login to spotify with ${email} and ${valid_password}" owner="LoginPageKeywords" source_name="Where user login to spotify with ${username} and ${password}">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-22T20:11:20.417541" level="INFO">${login_button} = xpath=//button[@data-testid="login-button"]</msg>
+<var>${login_button}</var>
+<arg>xpath=//button[@data-testid="login-button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-22T20:11:20.417358" elapsed="0.000215"/>
+</kw>
+<kw name="Wait until is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:20.434821" level="INFO">Clicking element 'xpath=//button[@data-testid="login-button"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:20.433116" elapsed="0.069208"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:20.417972" elapsed="0.084471"/>
+</kw>
+<arg>${login_button}</arg>
+<status status="PASS" start="2025-02-22T20:11:20.417727" elapsed="0.084785"/>
+</kw>
+<kw name="Wait until elemment is ready input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:20.503199" level="INFO">Typing text 'taweesak.rattanachuchok.pkg@gmail.com' into text field 'xpath=//input[@placeholder="Email or username"]'.</msg>
+<msg time="2025-02-22T20:11:20.649104" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-22T20:11:20.649239" level="FAIL">Element with locator 'xpath=//input[@placeholder="Email or username"]' not found.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-22T20:11:20.503063" elapsed="0.149949">Element with locator 'xpath=//input[@placeholder="Email or username"]' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:22.654626" level="INFO">Typing text 'taweesak.rattanachuchok.pkg@gmail.com' into text field 'xpath=//input[@placeholder="Email or username"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:22.654401" elapsed="0.270569"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:20.502929" elapsed="2.422127"/>
+</kw>
+<arg>xpath=//input[@placeholder="Email or username"]</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-02-22T20:11:20.502669" elapsed="2.422475"/>
+</kw>
+<kw name="Wait until elemment is ready input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:22.925893" level="INFO">Typing text 'Taweesak444555' into text field 'xpath=//input[@placeholder="Password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:22.925755" elapsed="0.051699"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:22.925614" elapsed="0.051950"/>
+</kw>
+<arg>xpath=//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-02-22T20:11:22.925349" elapsed="0.052277"/>
+</kw>
+<kw name="Wait until is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:22.978254" level="INFO">Clicking element 'xpath=//button[@id="login-button"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:22.978126" elapsed="0.037809"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:22.977987" elapsed="0.038052"/>
+</kw>
+<arg>xpath=//button[@id="login-button"]</arg>
+<status status="PASS" start="2025-02-22T20:11:22.977774" elapsed="0.038354"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:20.416971" elapsed="2.599214"/>
+</kw>
+<kw name="Then spotify show home page and display message as &quot;Recommended for you&quot;" owner="HomePageKeywords" source_name="Then spotify show home page and display message as &quot;${expected_message}&quot;">
+<kw name="Wait until page contains elemment then veryify text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:23.133134" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-22T20:11:23.133236" level="FAIL">Page should have contained text 'Recommended for you' but did not.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-02-22T20:11:23.017715" elapsed="0.116537">Page should have contained text 'Recommended for you' but did not.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:25.245861" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-22T20:11:25.245969" level="FAIL">Page should have contained text 'Recommended for you' but did not.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-02-22T20:11:25.136457" elapsed="0.109610">Page should have contained text 'Recommended for you' but did not.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:27.272515" level="INFO">Current page contains text 'Recommended for you'.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-22T20:11:27.247252" elapsed="0.025422"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>${expected_text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:23.017560" elapsed="4.255242"/>
+</kw>
+<arg>${expected_message}</arg>
+<status status="PASS" start="2025-02-22T20:11:23.017364" elapsed="4.255557"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:23.017064" elapsed="4.255941"/>
+</kw>
+<kw name="user logout from spotify" owner="HomePageKeywords" type="TEARDOWN">
+<kw name="Wait until is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:27.275122" level="INFO">Clicking element 'xpath=//button[@data-testid="user-widget-link"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:27.274864" elapsed="0.081817"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:27.274569" elapsed="0.082199"/>
+</kw>
+<arg>xpath=//button[@data-testid="user-widget-link"]</arg>
+<status status="PASS" start="2025-02-22T20:11:27.274149" elapsed="0.082679"/>
+</kw>
+<kw name="Wait until is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:27.357489" level="INFO">Clicking element 'xpath=//button[@data-testid="user-widget-dropdown-logout"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:27.357362" elapsed="0.038418"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:27.357223" elapsed="0.038633"/>
+</kw>
+<arg>xpath=//button[@data-testid="user-widget-dropdown-logout"]</arg>
+<status status="PASS" start="2025-02-22T20:11:27.356982" elapsed="0.038930"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:27.273699" elapsed="0.122252"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:20.416161" elapsed="6.979857"/>
+</test>
+<test id="s1-t2" name="As a open web url spotify to loging fail" line="17">
+<kw name="Where user login to spotify with ${email} and ${invalid_password}" owner="LoginPageKeywords" source_name="Where user login to spotify with ${username} and ${password}">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-02-22T20:11:27.397140" level="INFO">${login_button} = xpath=//button[@data-testid="login-button"]</msg>
+<var>${login_button}</var>
+<arg>xpath=//button[@data-testid="login-button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-02-22T20:11:27.397027" elapsed="0.000136"/>
+</kw>
+<kw name="Wait until is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:27.397813" level="INFO">Clicking element 'xpath=//button[@data-testid="login-button"]'.</msg>
+<msg time="2025-02-22T20:11:27.507526" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-22T20:11:27.507659" level="FAIL">Element with locator 'xpath=//button[@data-testid="login-button"]' not found.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-22T20:11:27.397680" elapsed="0.110093">Element with locator 'xpath=//button[@data-testid="login-button"]' not found.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:29.509547" level="INFO">Clicking element 'xpath=//button[@data-testid="login-button"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:29.509266" elapsed="0.061995"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:27.397533" elapsed="2.173809"/>
+</kw>
+<arg>${login_button}</arg>
+<status status="PASS" start="2025-02-22T20:11:27.397309" elapsed="2.174089"/>
+</kw>
+<kw name="Wait until elemment is ready input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:29.572119" level="INFO">Typing text 'taweesak.rattanachuchok.pkg@gmail.com' into text field 'xpath=//input[@placeholder="Email or username"]'.</msg>
+<msg time="2025-02-22T20:11:29.694758" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-22T20:11:29.694865" level="FAIL">Element with locator 'xpath=//input[@placeholder="Email or username"]' not found.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2025-02-22T20:11:29.571961" elapsed="0.123020">Element with locator 'xpath=//input[@placeholder="Email or username"]' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:31.696336" level="INFO">Typing text 'taweesak.rattanachuchok.pkg@gmail.com' into text field 'xpath=//input[@placeholder="Email or username"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:31.695493" elapsed="0.085281"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:29.571811" elapsed="2.209247"/>
+</kw>
+<arg>xpath=//input[@placeholder="Email or username"]</arg>
+<arg>${email}</arg>
+<status status="PASS" start="2025-02-22T20:11:29.571544" elapsed="2.209621"/>
+</kw>
+<kw name="Wait until elemment is ready input text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:31.784923" level="INFO">Typing text 'Taweesak555444' into text field 'xpath=//input[@placeholder="Password"]'.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:31.782178" elapsed="0.056862"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Input Text</arg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:31.781977" elapsed="0.057150"/>
+</kw>
+<arg>xpath=//input[@placeholder="Password"]</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-02-22T20:11:31.781578" elapsed="0.057611"/>
+</kw>
+<kw name="Wait until is ready then click element" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:31.839813" level="INFO">Clicking element 'xpath=//button[@id="login-button"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-02-22T20:11:31.839696" elapsed="0.027304"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:31.839566" elapsed="0.027527"/>
+</kw>
+<arg>xpath=//button[@id="login-button"]</arg>
+<status status="PASS" start="2025-02-22T20:11:31.839343" elapsed="0.027810"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:27.396608" elapsed="4.470585"/>
+</kw>
+<kw name="Then spotify should display validate login faill message as &quot;Incorrect username or password.&quot;" owner="LoginPageKeywords" source_name="Then spotify should display validate login faill message as &quot;${expected_menssage}&quot;">
+<kw name="Wait until page contains elemment then veryify text" owner="CommonKeywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:31.983919" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-02-22T20:11:31.984035" level="FAIL">Page should have contained text 'Incorrect username or password.' but did not.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="FAIL" start="2025-02-22T20:11:31.868035" elapsed="0.116105">Page should have contained text 'Incorrect username or password.' but did not.</status>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-02-22T20:11:34.002254" level="INFO">Current page contains text 'Incorrect username or password.'.</msg>
+<arg>${expected_text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-02-22T20:11:33.985439" elapsed="0.016989"/>
+</kw>
+<arg>5x</arg>
+<arg>2s</arg>
+<arg>Page Should Contain</arg>
+<arg>${expected_text}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-02-22T20:11:31.867899" elapsed="2.134677"/>
+</kw>
+<arg>${expected_menssage}</arg>
+<status status="PASS" start="2025-02-22T20:11:31.867716" elapsed="2.135002"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:31.867434" elapsed="2.135384"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:27.396206" elapsed="6.606896"/>
+</test>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-02-22T20:11:34.003906" elapsed="0.132787"/>
+</kw>
+<status status="PASS" start="2025-02-22T20:11:10.663509" elapsed="23.473253"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="LoginTestcases" id="s1" pass="2" fail="0" skip="0">LoginTestcases</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
